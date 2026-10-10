@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    color: #111111;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Mel Robbins custom buttons */
+  .button-yellow {
+    @apply inline-flex items-center justify-center font-bold text-dark bg-yellow hover:bg-yellow-hover px-6 py-3.5 rounded-full text-sm md:text-base transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-sm tracking-wide;
+  }
+
+  .button-black {
+    @apply inline-flex items-center justify-center font-bold text-white bg-dark hover:bg-dark-soft px-6 py-3.5 rounded-full text-sm md:text-base transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-sm tracking-wide;
+  }
+
+  .button-outline {
+    @apply inline-flex items-center justify-center font-bold text-dark border-2 border-dark hover:bg-dark hover:text-white px-6 py-3.5 rounded-full text-sm md:text-base transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] tracking-wide;
+  }
+
+  .site-card {
+    @apply bg-cream rounded-site p-6 md:p-8 transition-all duration-300 hover:shadow-lg border border-muted-border/40;
+  }
+
+  .site-pill {
+    @apply px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200;
+  }
+}
+
+/* Custom scrollbar for horizontal lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
